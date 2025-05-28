@@ -2,6 +2,11 @@
 
 PostGIS plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
+**IMPORTANT: This is a temporary plugin to allow installs with asdf v0.17+ until
+the postgis install is fixed in [@knu's
+repo](https://github.com/knu/asdf-postgis). It will be removed once [this
+PR](https://github.com/knu/asdf-postgis/pull/2) is merged.**
+
 ## Dependencies
 
 This requires [brew](http://brew.sh) if you're on macOS, or a Debian flavored Linux.  If you need it to work on something else, you'll likely need to modify the plugin.
@@ -40,7 +45,10 @@ Finally, you will need a working installation of PostgreSQL including server hea
 ## Installation
 
 ```sh
-asdf plugin-add postgis https://github.com/knu/asdf-postgis.git
+asdf plugin add postgis https://github.com/frm/asdf-postgis.git
+
+# if running asdf pre v0.17, use this instead:
+asdf plugin-add postgis https://github.com/frm/asdf-postgis.git
 ```
 
 For [mise](https://mise.jdx.dev/), this plugin is listed in the official registry and you don't need to manually install it.  Just run `mise install postgis 3.2`, which will work.
